@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.portfolio-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    
+}
+
+.navlist {
+    display: flex;
+    gap: 3.5rem;
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: #262525;
+    top: 0;
+    z-index: 1000;
+}
+
+.navlist li {
+    list-style: none;
+}
+
+.navlist li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: aliceblue;
+    position: relative;
+}
+
+.left-container, .right-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.left-container {
+    background: #e85d07;
+    width: 80%;
+    padding-left: 3rem;
+}
+
+.right-container {
+    background: linear-gradient(-45deg, #063705, #08911a 70%);
+    width: 30%;
+}
+
+.icons .fa-brands {
+    color: #bbb;
+    font-size: 1.7rem;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.content {
+    margin-left: 4rem;
+}
+
+.content .intro {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.content .intro span {
+    color: #fbff00;
+    width: 10%;
+}
+
+.content h1 {
+    font-size: 4rem;
+    color: #69efc4;
+}
+
+.content .detail {
+    font-size: 1.1rem;
+    color: #772171;
+    max-width: 38rem;
+    margin: 1.1rem 0 3rem 0;
+    line-height: 1.9rem;
+}
+
+.btn-container button {
+    border: .1rem solid #acaad5;
+    font-size: 1.1rem;
+    padding: .4rem 1.5rem;
+    border-radius: .2rem;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+button:nth-child(1) {
+    background: #e4e3e8;
+    color: #e28649;
+}
+
+button:nth-child(2) {
+    background: transparent;
+    color: #edeae2;
+    margin-left: 2rem;
+}
+
+button:nth-child(1):hover {
+    background: transparent;
+    color: #ed3c10;
+}
+
+button:nth-child(2):hover {
+    background: #5db9ee;
+    color: #db7114;
+}
+
+.icons .fa-brands:hover {
+    cursor: pointer;
+    background: linear-gradient(#fff, #6085d3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.design .circle {
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 55%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.circle:nth-child(1) {
+    background: linear-gradient(90deg, transparent 50%, #fefeff 50%);
+    width: 38rem;
+}
+
+.circle:nth-child(2) {
+    width: 30rem;
+    background-image: url("image/profile.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    box-shadow: 
+        0 0 1rem #fff,
+        inset 0 0 1rem #fff,
+        0 0 2rem #3877ff,
+        inset 0 0 2rem #3877ff,
+        0 0 4rem #3877ff,
+        inset 0 0 4rem #3877ff;
+}
+
+.navlist li a::after, .navlist .active::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .5s;
+}
+
+.navlist li a:hover::after, .navlist .active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+.main-section {
+    padding: 5rem 0;
+}
+
+.main-section.skills,
+.main-section.projects,
+.main-section.resume,
+.main-section.contact {
+    margin-top: 5rem;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.heading-text {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.width-80 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.width-100 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.project {
+    margin-bottom: 2rem;
+}
+
+.project h3 {
+    font-size: 1.8rem;
+    color: #444;
+}
+
+.project p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.resume button {
+    font-size: 1.2rem;
+    padding: .5rem 2rem;
+    border: none;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background .3s ease;
+}
+
+.resume button:hover {
+    background: #555;
+}
+
+.contact h3 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact h3 a:hover {
+    text-decoration: underline;
+}
+
+.contact .width-100 {
+    text-align: center;
+}
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem; 
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .additional-links {
+    margin-top: 0.5rem;
+}
+
+.footer .additional-links a {
+    color: #fff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.footer .additional-links a:hover {
+    text-decoration: underline;
+}
